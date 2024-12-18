@@ -1,16 +1,16 @@
 class Nitropy < Formula
   include Language::Python::Virtualenv
 
-  desc "A command line interface for the Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 and NetHSM"
+  desc "Command-line interface for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 and NetHSM"
   homepage "https://docs.nitrokey.com/software/nitropy/"
   url "https://files.pythonhosted.org/packages/27/33/a1795f7f43e3d0184cf811569719449c479aa4ed5d53ae430f4d06d72998/pynitrokey-0.7.1.tar.gz"
   sha256 "d61002522839bc7d916bf01261eb076fc8d191c52979719ee4ef3dfe54d2ae39"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/Nitrokey/pynitrokey.git", branch: "main"
 
+  depends_on "rust" => :build
   depends_on "hidapi"
   depends_on "python"
-  depends_on "rust" => :build
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/0f/bd/1d41ee578ce09523c81a15426705dd20969f5abf006d1afe8aeff0dd776a/certifi-2024.12.14.tar.gz"

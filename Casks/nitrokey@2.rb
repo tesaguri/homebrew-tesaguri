@@ -1,5 +1,6 @@
 cask "nitrokey@2" do
   arch arm: "arm64", intel: "intel64"
+
   version "2.3.3"
   sha256 arm:   "3f9c8db7d6e7fd488d3a05fcdf26a9afadb77676f77f703be7b405881f20f8e2",
          intel: "1c248f4e52e331964ab70aa617d5adc0091f96548df4f03693a59af2489d8416"
